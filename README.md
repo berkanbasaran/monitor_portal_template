@@ -36,5 +36,6 @@ edit
   
   change url and auth
   
+  insecure_skip_verify = true
 
 
