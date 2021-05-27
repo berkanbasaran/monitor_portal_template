@@ -1,0 +1,66 @@
+body {
+            background: url(bg.jpg);
+            margin: 0px;
+            padding: 0px;
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+        .main_title {
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+        .section1, .section2 {
+            
+            width: 44%;
+            display: inline-block;
+            margin: auto;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.5s ease;
+            border: 1px solid black;
+            border-radius: 5px;
+            overflow: hidden;
+            
+        }
+        .img {
+            padding: 15px;
+        }
+        .img img {
+            border-radius: 10px;
+            border: 2px groove gray;
+            background: black;
+            width: 60%;
+            
+        }
+        .title {
+            padding: 10px;
+            background: rgba(155, 155, 155, 0.3);
+            display: block;
+            font-size: 24px;
+            color: white;
+            text-shadow: 1px 0px 1px #010101;
+        }
+        .section1:hover, .section2:hover {
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            width: 45%;
+        }
+        .footer {
+            font-size: 8px;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            color: black;
+            margin: auto;
+            display: block;
+            text-align: center;
+        }
