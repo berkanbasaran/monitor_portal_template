@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript">
+        var webTitle = "Datacenter Monitoring Portal";
+        function goToURL(url){
+            window.location.href = "//" + url;
+        }
+        window.onload = function(){
+            document.getElementById("mainTitle").innerText = webTitle;
+        }
+        
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antalya ISM Monitör Portal</title>
-    <link rel="stylesheet" href="custom.css">
-    <script type="text/javascript">
-        function goToURL(url){
-            window.location.href = "//" + url;
-        }
-    </script>
+    <link rel="stylesheet" href="rsc/custom.css">
+    
 </head>
 <body>
     <div class="container">
-        <div class="main_title"><h1>Antalya ISM Monitör Portal</h1></div>
+        <div class="main_title"><h1 id = "mainTitle"></h1></div>
         <div class="section1" onclick="goToURL(window.location.hostname + '/zabbix')">
             <div class="img">
-                <img src="zabbix_logo.png" alt="Zabbix Logo IMG">
+                <img src="rsc/zabbix_logo.png" alt="Zabbix Logo IMG">
             </div> 
             <div class="title">ZABBIX</div>
         </div>
         <div class="section2" onclick="goToURL(window.location.hostname + ':3000')">
             <div class="img">
-                <img src="grafana_logo.png" alt="Grafana Logo IMG">
+                <img src="rsc/grafana_logo.png" alt="Grafana Logo IMG">
             </div>
             <div class="title">GRAFANA</div>
         </div>
     </div>
     <div class="footer">
-        <img src="4us-logo.png" width="64" alt="">
+        <img src="rsc/4us-logo.png" width="64" alt="">
         <br>
         © 4us Bilişim San. Tic. Ltd. Şti.
     </div>
