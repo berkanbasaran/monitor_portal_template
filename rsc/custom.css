@@ -66,8 +66,10 @@ body {
 
 .zabbix_section:hover > .title_bar {
     width: 100%;
-    background-color: rgb(255, 73, 73);
-    border-bottom: 1px solid rgb(243, 25, 25);
+    float: left;
+    box-sizing: border-box;
+    background-color: black;
+    border-bottom: 1px solid black;
 }
 .grafana_section:hover > .title_bar {
     width: 100%;
