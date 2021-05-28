@@ -1,80 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body {
-            background: url(bg.jpg);
-            margin: 0px;
-            padding: 0px;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            color: rgb(117, 156, 207);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        .container {
-            width: 100%;
-            text-align: center;
-            margin: auto;
-            display: block;
-        }
-        .main_title {
-            text-align: center;
-            display: block;
-            margin: auto;
-            text-shadow: 1px -1px 1px black;
-        }
-        .section1, .section2 {
-            
-            width: 44%;
-            display: inline-block;
-            margin: auto;
-            text-align: center;
-            background: rgba(60, 60, 60, 0.5);
-            transition: all 0.5s ease;
-            border: 1px solid black;
-            border-radius: 5px;
-            overflow: hidden;
-            
-        }
-        .img {
-            padding: 15px;
-        }
-        .img img {
-            border-radius: 512px;
-            border: 2px groove gray;
-            background: black;
-            width: 60%;
-            
-        }
-        .title {
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.3);
-            display: block;
-            font-size: 24px;
-            color: white;
-            text-shadow: 1px 0px 1px #010101;
-        }
-        .section1:hover, .section2:hover {
-            background: rgba(80, 80, 80, 0.3);
-            cursor: pointer;
-            width: 45%;
-        }
-        .section1 .title {
-            color: #ee564b;
-        }
-        .section2 .title {
-            color: #feae00;
-        }
-        .footer {
-            padding: 10px 0px 10px 0px;
-            font-size: 16px;
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            right: 0;
-            color: rgb(117, 156, 207);
-            margin: auto;
-            display: block;
-            text-align: center;
-            background: rgba(20, 20, 20, 0.8);
-        }
-        hr {
-            border-color: black;
-        }
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(#666, #444, #222);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-align: center;
+    padding: 1vh 2vw;
+    margin: 5vh auto;
+}
+.zabbix_section{
+    box-sizing: border-box;
+    width: 45%;
+    background: linear-gradient(#111, #222, #333);
+    display: inline-block;
+    margin: auto;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    float: left;
+    cursor: pointer;
+    color: rgb(211,31,38);
+    border: 1px solid black;
+}
+.grafana_section{
+    box-sizing: border-box;
+    width: 45%;
+    background: linear-gradient(#111, #222, #333);
+    display: inline-block;
+    margin: auto;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    float: right;
+    cursor: pointer;
+    color:rgb(255, 150, 13);
+    border: 1px solid black;
+}
+
+.title {
+    display: block;
+    width: 100%;
+    padding: 1vh;
+    font-weight: bold;
+    font-size: 3vw;
+}
+.title_bar {
+    
+    width: 0;
+    height: 0.5vh;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    float: left;
+    
+}
+
+.zabbix_section:hover > .title_bar {
+    width: 100%;
+    background-color: rgb(255, 73, 73);
+    border-bottom: 1px solid rgb(243, 25, 25);
+}
+.grafana_section:hover > .title_bar {
+    width: 100%;
+    float: right;
+    box-sizing: border-box;
+    background-color: rgb(255, 159, 49);
+    border-bottom: 1px solid rgb(194, 129, 32);
+}
+.zabbix_section:hover > .bg_img {
+    background-size: 60%;
+}
+.grafana_section:hover > .bg_img {
+    background-size: 60%;
+}
+.bg_img {
+    width: 100%;
+    display: block;
+    height: 45vh;
+    transition: all 0.5s ease;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+}
+
+.grafana_section > .bg_img {
+    background: url("grafana_logo.png") black;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.zabbix_section > .bg_img {
+    background: url("zabbix_logo.png") rgb(211,31,38);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1vw;
+    width: 100%;
+    background: linear-gradient(#111, #222, #333);
+    text-align: right;
+    color: rgb(161, 161, 161);
+    padding: 2vh 1vw 2vh 0;
+    box-sizing: border-box;
+}
+.footer img {
+    width: 5vw;
+}

@@ -6,9 +6,6 @@
         function goToURL(url){
             window.location.href = "//" + url;
         }
-        window.onload = function(){
-            document.getElementById("mainTitle").innerText = webTitle;
-        }
         
     </script>
     <meta charset="UTF-8">
@@ -20,25 +17,32 @@
 </head>
 <body>
     <div class="container">
-        <div class="main_title"><h1 id = "mainTitle"></h1></div>
-        <div class="section1" onclick="goToURL(window.location.hostname + '/zabbix')">
-            <div class="img">
-                <img src="rsc/zabbix_logo.png" alt="Zabbix Logo IMG">
-            </div> 
-            <div class="title">ZABBIX</div>
-        </div>
-        <div class="section2" onclick="goToURL(window.location.hostname + ':3000')">
-            <div class="img">
-                <img src="rsc/grafana_logo.png" alt="Grafana Logo IMG">
+        <div class="zabbix_section" onclick="goToURL(window.location.hostname + '/zabbix')">
+            <div class="title">
+                ZABBIX
             </div>
-            <div class="title">GRAFANA</div>
+            <div class="title_bar">
+
+            </div>
+            <div class="bg_img">
+
+            </div>
+        </div>
+        <div class="grafana_section" onclick="goToURL(window.location.hostname + ':3000')">
+            <div class="title">
+                GRAFANA
+            </div>
+            <div class="title_bar">
+
+            </div>
+            <div class="bg_img">
+
+            </div>
         </div>
     </div>
     <div class="footer">
-        <img src="rsc/4us-logo.png" width="64" alt="">
-        <br>
-        © 4us Bilişim San. Tic. Ltd. Şti.
+        <div class="powered"> Powered by &nbsp;<a href="http://4us.com.tr"><img src="rsc/4us-logo.png" alt="4us Logo"></a></div>
+       
     </div>
-    
 </body>
 </html>
